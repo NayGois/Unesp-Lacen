@@ -1,0 +1,249 @@
+.content-campus {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.content-campus img {
+    width: 70%;
+    height: auto; /* Altura automática para manter a proporção */
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+
+.content-campus p {
+    font-size: 18px;
+    color: rgb(50, 50, 123);
+    width: 70%;
+    text-align: left;
+}
+
+
+.lab-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    margin-bottom: 50px; /* Espaçamento entre esta seção e outras */
+}
+
+.lab-section h2 {
+    margin-bottom: 20px; /* Espaçamento entre o título e a galeria de fotos */
+    color:rgb(50, 50, 123);
+    font-size: 22px;   
+    font-weight: bold;
+    text-align: left; /* Alinha o texto à esquerda */
+    padding-top: 50px; /* Adiciona espaço acima do título */  
+}
+
+.gallery {
+    display: flex; /* Exibe as fotos em linha */
+    justify-content: center; /* Centraliza as fotos horizontalmente */
+    gap: 20px; /* Espaçamento entre as fotos */
+    margin-left: -110px;
+    padding-top: 40px;
+}
+
+.gallery img {
+    width: 250px; /* Largura das imagens */
+    height: 250px; /* Altura automática para manter a proporção */
+    border-radius: 10px; /* Borda arredondada nas imagens */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave nas imagens */
+    cursor: pointer;
+}
+
+
+/* Estilos para a imagem ampliada */
+.expanded-image {
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+/* Estilos para a sobreposição */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para o botão de fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 9999;
+    font-weight: bolder;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+
+/* Para telas menores que 767px */
+@media (max-width: 767px) {
+    .content-campus {
+        padding: 10px;
+        margin: 190px auto 0;
+        max-width: 100%;
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .content-campus img {
+        width: 100%; /* Definir a largura como 100% para ocupar a largura total do container */
+        height: auto; /* Altura automática para manter a proporção da imagem */
+        margin-left: auto; /* Centralizar horizontalmente */
+        margin-right: auto; /* Centralizar horizontalmente */
+        display: block; /* Garantir que a imagem seja exibida como bloco */
+        margin-top: -40px;
+    }
+    .content-campus p {
+        width: 100%; /* Definir a largura como 100% para ocupar a largura total do container */
+        margin-left: auto; /* Centralizar horizontalmente */
+        margin-right: auto; /* Centralizar horizontalmente */
+        text-align: left; /* Alinhar o texto à esquerda */
+        font-size: 18px;
+        color: rgb(50, 50, 123);
+    }
+    
+    .lab-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens horizontalmente */
+        text-align: center; /* Alinha o texto ao centro */
+        margin-bottom: 50px; /* Espaçamento entre esta seção e outras */
+    }
+
+    .lab-section h2 {
+        margin-top: 20px; /* Reduzir a margem superior */
+        text-align: center; /* Centralizar o texto */
+        padding-top: 5px;
+    }
+
+    .gallery {
+        margin-left: auto; /* Centralizar horizontalmente */
+        margin-right: auto; /* Centralizar horizontalmente */
+        margin-top: 40px;
+    }
+
+    .gallery img {
+        width: 100%; /* Definir a largura como 100% para ocupar a largura total do container */
+        max-width: 250px; /* Largura máxima para manter a proporção */
+        height: auto; /* Altura automática para manter a proporção */
+        margin-bottom: 20px; /* Espaçamento entre as imagens */
+    }
+
+    .close-btn {
+        font-size: 14px; /* Tamanho menor para o texto do botão */
+        padding: 3px 6px; /* Padding menor para o botão */
+    }
+}
+
+/* Para telas entre 768px e 1200px */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .content-campus p {
+        text-align: left;
+        font-size: 16px;
+        color: rgb(50, 50, 123);
+        width: 90%;
+        margin: 0 auto 20px;
+        
+    }
+
+    .lab-section h2 {
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(50, 50, 123);
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .gallery {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .gallery img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Para telas até 500% de zoom */
+@media (max-width: 500%) {
+    .content-campus p {
+        text-align: left;
+        font-size: 16px;
+        color: rgb(50, 50, 123);
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .lab-section h2 {
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(50, 50, 123);
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .gallery {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .gallery img {
+        width: 200px;
+        height: 200px;
+    }
+}

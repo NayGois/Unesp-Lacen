@@ -1,0 +1,150 @@
+
+.person-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.person-details .lattes-link {
+    position: relative; /* Adicione position: relative; */
+    z-index: 1; /* Adicione z-index: 1; */
+}
+
+.person-name {
+    font-weight: bold; /* Torna o nome da pessoa em negrito */
+    margin-bottom: 5px; /* Adiciona espaço abaixo do nome */
+}
+
+.additional-text1,
+.additional-text2,
+.additional-text3 {
+    font-size: 14px; /* Define o tamanho da fonte para a descrição da pessoa */
+    line-height: 1.5; /* Define a altura da linha */
+    margin-top: 5px; /* Adiciona espaço acima do texto adicional */
+    width: 700px;
+    word-wrap: break-word; /* Permite que o texto seja quebrado quando excede a largura máxima */
+}
+
+.people-section {
+    /* Centraliza o conteúdo na página */
+    margin: 0 auto; /* Isso já centraliza horizontalmente */
+    max-width: 800px; /* Define uma largura máxima para a seção */
+    font-family: "Herald", sans-serif; /* Define a família da fonte */
+    color: #003366; 
+    padding-left: 280px; 
+    margin-top: -300px; 
+    
+}
+
+
+.people-section .person {
+    display: flex; /* Usa flexbox para alinhar as pessoas horizontalmente */
+    align-items: flex-start; /* Alinha as pessoas verticalmente */
+    margin-bottom: 20px; /* Adiciona espaço entre as pessoas */
+    
+}
+
+.people-section .person img {
+    width: 160px; /* Define a largura padrão para todas as imagens */
+    height: 150px; /* Define a altura padrão para todas as imagens */
+    margin-right: 20px;
+    border-radius: 10px;    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.people-section .person:nth-child(3) {
+    padding-right: 20px;
+}
+
+
+/* Estilos para dispositivos de tela pequena */
+@media screen and (min-width: 136px) and (max-width: 433px) {
+    
+
+    .description-text {
+        font-size: 14px; /* Define o tamanho da fonte para .description-text */
+       
+    }
+    
+    .additional-text {
+        font-size: 12px; /* Define o tamanho da fonte para .additional-text */    
+        
+    }
+
+    .description-text,
+    .additional-text {
+        text-align: left; /* Justifica o texto */
+        max-width: 80%; /* Ajusta a largura máxima do texto */
+        margin-left: 10%; /* Ajusta a margem esquerda */
+        margin-right: 10%; /* Ajusta a margem direita */
+    }
+   
+
+    .people-section {
+        max-width: 80%; /* Reduz a largura máxima da people-section */
+        padding-left: 10px; /* Reduz a margem esquerda */
+        margin-top: -60px; 
+        padding-right: 90px;   
+    }
+
+    .people-section .person {
+        flex-direction: column; /* Alinha as pessoas verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
+        justify-content: left;
+    }
+
+    .people-section .person img {
+        width: 100%; /* Define a largura das imagens para 100% */
+        max-width: 90px; /* Define a largura máxima das imagens */
+        height: auto; /* Mantém a proporção da imagem */
+        margin-bottom: 10px; /* Adiciona espaço entre as imagens e o conteúdo abaixo */
+        margin-right: 50px;
+        margin-top: 80px;
+    }
+    .people-section .person-details {
+        width: 100%; /* Define a largura máxima dos detalhes da pessoa para ocupar a largura disponível */
+        font-size: 14px; /* Define o tamanho da fonte para os detalhes da pessoa */
+    }
+
+    .people-section .person-details p {
+        max-width: 130%; /* Define a largura máxima dos parágrafos para ocupar a largura disponível */
+        font-size: 14px; /* Define o tamanho da fonte para os parágrafos */
+        margin-right:30px;
+    }
+
+    .people-section .person:nth-child(3) {
+        padding-right: 0; /* Remove o preenchimento direito da terceira pessoa */
+    }
+
+    .content-moved .people-section {
+        margin-top: 300px;
+    }
+}
+
+
+@media screen and (min-width: 434px) and (max-width: 1162px) {
+    .people-section {
+       margin-top: 70px;
+    }
+
+    .people-section .person img {
+        margin-top: 20px;
+    }
+   
+    .content-moved .people-section {
+        margin-top: 400px;
+    }
+}
+
+@media screen and (min-width: 1800px) and (max-width: 4500px) {
+    .people-section {
+        margin-top: 80px;
+    }
+    .people-section .person img {
+        margin-top: 20px;
+    }
+   
+    .content-moved .people-section {
+        margin-top: 400px;
+    }
+
+}
